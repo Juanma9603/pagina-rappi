@@ -1,0 +1,130 @@
+:root
+{--select-fonts-lato:'Lato', sans-serif;
+--select-secondary-color: #fedbd0;
+--select-primary-color: #442c2e;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    font-family:var(--select-fonts-lato);
+    background-color: var(--select-secondary-color);
+    align-items: center;
+
+}
+
+.brand {
+    color:var(--select-primary-color);
+    text-transform: uppercase;
+    font-size: 22px;
+    letter-spacing: 5px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.nav-links li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--select-primary-color);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+.burger {
+    cursor: pointer;
+    display: none;
+    }
+
+.burger div{
+    width: 25px;
+    height: 25px;
+    margin: 5px;
+    transition: all 0.3s ease;
+    }
+
+.burger .linea1{
+    height: 2px;
+    margin: 5px;
+    background-color: var(--select-primary-color);
+}
+
+.burger .linea2{
+    height: 2px;
+    margin: 5px;
+    background-color: var(--select-primary-color);
+}
+
+.burger .linea3{
+    height: 2px;
+    margin: 5px;
+    background-color: var(--select-primary-color);
+}
+
+@media screen and (max-width:721px){
+    
+    .nav-links a{
+        color: #fedbd0;
+    }
+
+    .burger{
+        display: block;
+    }
+    
+    nav{
+        height: 8vh;
+    }
+
+    .nav-links{
+        display: flex;
+        position: absolute;
+        left: 0px;
+        top: 8vh;
+        background-color: var(--select-primary-color);
+        height: 92vh;
+        width: 50%;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li{
+        opacity: 1;
+    }
+
+}
+
+.nav-active{
+    transform: translateX(0%);
+}
+
+.close .linea1{
+    transform: rotate(-45deg) translate(-4px,6px);
+
+}
+.close .linea2{
+    opacity: 0;
+    
+}
+.close .linea3{
+    transform: rotate(45deg) translate(-4px,-6px);
+    
+}
